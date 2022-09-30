@@ -1,4 +1,6 @@
 # Carpet Sky Additions (Previously SkyBlock)
+This is a fork of the orginal Carpet Sky Additions that restores the end to the original minecraft state.
+# Original README
 
 [![GitHub downloads](https://img.shields.io/github/downloads/jsorrell/CarpetSkyAdditions/total?label=Github%20downloads&logo=github)](https://github.com/jsorrell/CarpetSkyAdditions/releases)
 [![CurseForge downloads](http://cf.way2muchnoise.eu/full_633402_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/carpet-sky-additions)

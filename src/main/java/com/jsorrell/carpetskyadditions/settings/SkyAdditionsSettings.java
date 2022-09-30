@@ -26,13 +26,13 @@ public class SkyAdditionsSettings {
   public static boolean generateSilverfishSpawners = true;
 
   @Rule(categories = GENERATION)
+  public static boolean generateLavaSource = true;
+
+  @Rule(categories = GENERATION)
   public static boolean generateAncientCityPortals = true;
 
   @Rule(categories = GENERATION)
   public static boolean generateMagmaCubeSpawners = false;
-
-  @Rule(categories = GENERATION)
-  public static boolean generateRandomEndGateways = false;
 
   /* Features -- can be used in any generation, SkyBlock or not.
    *  These all default to false so this mod is impotent by default like Carpet.
@@ -70,38 +70,10 @@ public class SkyAdditionsSettings {
   @SkyAdditionsSetting("true")
   public static boolean renewableBuddingAmethysts = false;
 
-  /* Chorus Plant Generation */
-  @Rule(categories = FEATURE)
-  @SkyAdditionsSetting("true")
-  public static boolean gatewaysSpawnChorus = false;
-
   /* Dolphins Find Hearts of the Sea */
   @Rule(categories = FEATURE)
   @SkyAdditionsSetting("true")
   public static boolean renewableHeartsOfTheSea = false;
-
-  /* Ender Dragons Can Drop Heads */
-  @Rule(categories = FEATURE)
-  @SkyAdditionsSetting("true")
-  public static boolean renewableDragonHeads = false;
-
-  /* Shulker Spawning */
-  private static class ShulkerSpawningNameFix extends SettingFixer {
-    @Override
-    public String[] alternateNames() {
-      return new String[]{"shulkerSpawning"};
-    }
-
-    @Override
-    public FieldPair fix(FieldPair fieldPair) {
-      fieldPair.setName("shulkerSpawnsOnDragonKill");
-      return fieldPair;
-    }
-  }
-
-  @Rule(categories = FEATURE)
-  @SkyAdditionsSetting(value = "true", fixer = ShulkerSpawningNameFix.class)
-  public static boolean shulkerSpawnsOnDragonKill = false;
 
   /* Anvils Compact Coal into Diamonds */
   @Rule(categories = FEATURE)

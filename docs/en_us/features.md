@@ -21,16 +21,6 @@ This method was added because:
 
 ---
 
-#### Shulkers Spawn On Dragon Kill ####
-
-Provides *Shulkers*
-
-Disable with ```/carpetskyadditions removeDefault shulkerSpawning```
-
-When an Ender Dragon is re-killed, a Shulker spawns on top of the Bedrock pillar.
-
----
-
 #### Goats Break Apart Nether Wart Blocks By Ramming Them ####
 
 Provides *Nether Wart*
@@ -191,16 +181,6 @@ Disable with ```/carpetskyadditions removeDefault saplingsDieOnSand```
 Saplings can be placed on Sand and Red Sand.
 
 After a time, the saplings will die and turn into Dead Bushes.
-
----
-
-#### Ender Dragons Can Drop their Head ####
-
-Provides *Dragon Heads*
-
-Disable with ```/carpetskyadditions removeDefault renewableDragonHeads```
-
-When an Ender Dragon is killed by a Charged Creeper, she will drop her head.
 
 ---
 

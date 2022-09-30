@@ -1,10 +1,12 @@
 package com.jsorrell.carpetskyadditions.gen;
 
+import com.jsorrell.carpetskyadditions.settings.SkyAdditionsSettings;
 import com.jsorrell.carpetskyadditions.util.SkyAdditionsIdentifier;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.MobSpawnerBlockEntity;
 import net.minecraft.entity.EntityType;
+import net.minecraft.fluid.LavaFluid;
 import net.minecraft.structure.StructurePiece;
 import net.minecraft.structure.StructurePlacementData;
 import net.minecraft.structure.StructureTemplate;
@@ -149,6 +151,10 @@ public class SkyBlockStructures {
       this.addBlock(world, westFrame.with(EndPortalFrameBlock.EYE, hasEye[9]), 7, 3, 4, bounds);
       this.addBlock(world, westFrame.with(EndPortalFrameBlock.EYE, hasEye[10]), 7, 3, 5, bounds);
       this.addBlock(world, westFrame.with(EndPortalFrameBlock.EYE, hasEye[11]), 7, 3, 6, bounds);
+
+      if(SkyAdditionsSettings.generateLavaSource) {
+        this.addBlock(world, Blocks.LAVA.getDefaultState(), 5, 3, 5, bounds);
+      }
 
       if (complete) {
         this.fillBlocks(world, Blocks.END_PORTAL.getDefaultState(), 4, 3, 4, 6, 3, 6, bounds);

@@ -61,17 +61,15 @@ Ensure you have a safe supply of villagers. Trade for Emeralds so Wandering Trad
 
 ### 10. Obtain Lava
 
-Kill a Pillager captain at a Pillager Outpost to get the Bad Omen effect, then start and defeat a raid by entering a "
-Village".
-Once you have the Hero of the Village effect, stand by a Toolsmith and they may gift you a Lava Bucket.
+Travel to the end portal to find a single source block of lava. In order to get more, use a Dripstone and a cauldron or visit another stronghold.
 
 ### 11. Enter the Nether
 
-Get 10 Lava, either through Hero of the Village Gifts or by buying Pointed Dripstone from the Wandering Trader.
+Get 10 Lava by buying Pointed Dripstone from the Wandering Trader.
 Use the Lava to make a Nether Portal frame.
 Light the portal with Lightning or using Lava to set wood on fire adjacent to the frame.
 
 ### 12. Kill the Ender Dragon
 
-Obtain Blaze Powder by killing Blazes that spawn in Strongholds.
+Obtain Blaze Powder by killing Blazes that spawn in Nether Fortresses.
 You can then craft Eyes of Ender, complete an End Portal, and kill the Ender Dragon.

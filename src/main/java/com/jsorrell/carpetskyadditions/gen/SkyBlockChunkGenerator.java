@@ -230,17 +230,6 @@ public class SkyBlockChunkGenerator extends NoiseChunkGenerator {
           PlacedFeature placedFeature = indexedFeature.features().get(p);
           Supplier<String> placedFeatureNameSupplier = () -> placedFeatures.getKey(placedFeature).map(Object::toString).orElseGet(placedFeature::toString);
           chunkRandom.setDecoratorSeed(populationSeed, p, genStep);
-          try {
-            // Random End Gateways
-            if (SkyAdditionsSettings.generateRandomEndGateways && placedFeature.feature().matchesId(new Identifier("end_gateway_return"))) {
-              world.setCurrentlyGeneratingStructureName(placedFeatureNameSupplier);
-              placedFeature.generate(world, this, chunkRandom, minChunkPos);
-            }
-          } catch (Exception e) {
-            CrashReport crashReport = CrashReport.create(e, "Feature placement");
-            crashReport.addElement("Feature").add("Description", placedFeatureNameSupplier::get);
-            throw new CrashException(crashReport);
-          }
         }
       }
       world.setCurrentlyGeneratingStructureName(null);

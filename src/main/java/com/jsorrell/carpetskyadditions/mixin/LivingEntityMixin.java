@@ -20,23 +20,4 @@ public abstract class LivingEntityMixin extends Entity {
   public LivingEntityMixin(EntityType<?> type, World world) {
     super(type, world);
   }
-
-  @Inject(
-    method = "onDeath",
-    locals = LocalCapture.CAPTURE_FAILSOFT,
-    at =
-    @At(
-      value = "INVOKE_ASSIGN",
-      target =
-        "Lnet/minecraft/entity/damage/DamageSource;getAttacker()Lnet/minecraft/entity/Entity;"))
-  public void rememberDragonKiller(DamageSource source, CallbackInfo ci, Entity killer) {
-    if (SkyAdditionsSettings.renewableDragonHeads) {
-      if (this.getType() == EntityType.ENDER_DRAGON && killer instanceof CreeperEntity killerCreeper) {
-        if (killerCreeper.shouldDropHead()) {
-          killerCreeper.onHeadDropped();
-          ((EnderDragonEntityInterface) this).setShouldDropHead();
-        }
-      }
-    }
-  }
 }

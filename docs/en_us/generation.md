@@ -8,6 +8,8 @@ The only difference is that End Portal eyes are randomized -- this may change in
 
 Only a few things are generated:
 
+- The entirety of the end dimension
+
 - A small starting island where you spawn:
   ![small spawn platform with grass and an oak tree](../screenshots/spawn_platform.png?raw=true "Spawn Platform")
 
@@ -19,6 +21,7 @@ Only a few things are generated:
 
 - Silverfish spawners (unless `generateSilverfishSpawners` is set to `false`)
 
+- Lava Source in the middle of the end portal (unless `generateLavaSource` is set to `false`)
+
 - Magma Cube spawners in Treasure Room Bastion Remnants (only if `generateMagmaCubeSpawners` is set to `true`)
 
-- Random End Gateways throughout the End (only if `generateRandomEndGateways` is set to `true`)
