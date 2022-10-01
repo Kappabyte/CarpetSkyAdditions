@@ -219,9 +219,7 @@ public class SkyBlockStructures {
 
   public record SpawnPlatform(BlockPos worldSpawn) {
     public void generate(ServerWorldAccess world, Random random) {
-      StructureTemplate structure = Objects.requireNonNull(world.getServer()).getStructureTemplateManager().getTemplate(new SkyAdditionsIdentifier("spawn_platform")).orElseThrow();
-      BlockPos structureOrigin = worldSpawn.subtract(new BlockPos(4, 1, 1));
-      structure.place(world, structureOrigin, worldSpawn, new StructurePlacementData(), random, Block.NOTIFY_LISTENERS);
+      world.setBlockState(new BlockPos(0, -61, 0), Blocks.GRASS_BLOCK.getDefaultState(), 0);
     }
   }
 }

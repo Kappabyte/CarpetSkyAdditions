@@ -77,24 +77,8 @@ public abstract class MinecraftServerMixin {
     ChunkGenerator chunkGenerator = chunkManager.getChunkGenerator();
     if (!(chunkGenerator instanceof SkyBlockChunkGenerator)) return;
 
-    ChunkPos chunkPos = new ChunkPos(chunkManager.getNoiseConfig().getMultiNoiseSampler().findBestSpawnPosition());
-    int spawnHeight = chunkGenerator.getSpawnHeight(world);
-    BlockPos worldSpawn = chunkPos.getStartPos().add(8, spawnHeight, 8);
-    worldProperties.setSpawnPos(worldSpawn, 0.0f);
-
-    new SkyBlockStructures.SpawnPlatform(worldSpawn).generate(world, world.random);
-
-    // Might as well make this an option
-    if (bonusChest) {
-      BlockPos bonusChestPos = worldSpawn.south();
-      world.setBlockState(bonusChestPos, Blocks.CHEST.getDefaultState(), Block.NOTIFY_LISTENERS);
-      LootableContainerBlockEntity.setLootTable(world, world.random, bonusChestPos, LootTables.SPAWN_BONUS_CHEST);
-      BlockState torchState = Blocks.TORCH.getDefaultState();
-      for (Direction direction : Direction.Type.HORIZONTAL) {
-        BlockPos torchPos = bonusChestPos.offset(direction);
-        world.setBlockState(torchPos, torchState, Block.NOTIFY_LISTENERS);
-      }
-    }
+    world.setBlockState(new BlockPos(0, -61, 0), Blocks.GRASS_BLOCK.getDefaultState(), 0);
+    worldProperties.setSpawnPos(new BlockPos(0, 100, 0), 0.0f);
 
     ci.cancel();
   }
