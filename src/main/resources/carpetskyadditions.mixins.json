@@ -35,7 +35,9 @@
     "VexEntityMixin",
     "WanderingTraderEntityMixin",
     "WanderingTraderManagerMixin",
-    "WorldGenSettingsHeightAndBiomeFixMixin"
+    "WorldGenSettingsHeightAndBiomeFixMixin",
+    "SettingsMixin",
+    "SettingsAccessor"
   ],
   "injectors": {
     "defaultRequire": 1
